@@ -17,22 +17,49 @@ inquirer
     },
     {
       type: "input",
-      message: "What is your linkedIn URL?",
-      name: "LinkedIn",
+      message: "What are the installation instructions for your project?",
+      name: "installation",
     },
     {
       type: "input",
-      message: "What is your GitHub URL?",
-      name: "GitHub",
+      message: "What is the usage information for your project?",
+      name: "usage",
+    },
+    {
+      type: "input",
+      message: "What are the contribution guidelines for your project?",
+      name: "contributing",
+    },
+    {
+      type: "input",
+      message: "What are the test instructions for your project?",
+      name: "tests",
     },
   ])
   .then((response) => {
     //takes argument of specific properties belonging to the response, thus destructuring.
 
     const info = `
-    # ${response.title}
-    ## ${response.description}
-    
+# ${response.title}
+
+## ${response.description}
+
+## Installation
+${response.installation}
+
+## Usage
+${response.usage}
+
+## License
+
+## Contributing
+${response.contributing}
+
+## Tests
+${response.tests}
+
+## Questions
+
   `;
 
     const folder = "generated-readmes";

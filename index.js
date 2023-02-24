@@ -7,13 +7,13 @@ inquirer
   .prompt([
     {
       type: "input",
-      message: "What is your name?",
-      name: "user",
+      message: "What is the title of your project?",
+      name: "title",
     },
     {
       type: "input",
-      message: "What is your location?",
-      name: "location",
+      message: "What is the project description?",
+      name: "description",
     },
     {
       type: "input",
@@ -30,18 +30,13 @@ inquirer
     //takes argument of specific properties belonging to the response, thus destructuring.
 
     const info = `
-    <body>
-    <div class="info">
-    <h2>Hi ${response.user}!</h2>
-    <p>You are based in ${response.location}.</p>
-    <p>Your LinkedIn URL is: ${response.LinkedIn}.</p>
-    <p>Your Github URL is: ${response.GitHub}.</p>
-    </div>
-    </body>
+    # ${response.title}
+    ## ${response.description}
+    
   `;
 
-    const folder = "generated-readmes"; 
-    const filePath = `${folder}/${response.user}.html`;
+    const folder = "generated-readmes";
+    const filePath = `${folder}/${response.title}.md`;
 
     fs.writeFile(filePath, info, (err) =>
       err ? console.error(err) : console.log("Commit logged!")

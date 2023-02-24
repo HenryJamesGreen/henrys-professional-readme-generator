@@ -49,15 +49,34 @@ inquirer
       type: "list",
       message: "Choose a license for your project",
       name: "license",
-      choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3-Clause", "None"],
+      choices: ["MIT", "Apache", "BSD 3-Clause", "GNU GPL v3", "None"],
     },
   ])
   .then((response) => {
     //takes argument of specific properties belonging to the response, thus destructuring.
 
-
+    let licenseBadge;
+    switch (response.license) {
+      case "MIT":
+        licenseBadge =
+          "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        break;
+      case "Apache":
+        licenseBadge =
+          "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+      case "BSD 3-Clause":
+        licenseBadge =
+          "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+      case "GNU GPL v3":
+        licenseBadge =
+          "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+      default:
+        licenseBadge = "none";
+    }
 
     const info = `
+${licenseBadge};
+
 # ${response.title}
 
 ## ${response.description}

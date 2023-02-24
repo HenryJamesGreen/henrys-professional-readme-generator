@@ -45,9 +45,17 @@ inquirer
       message: "What is your email",
       name: "email",
     },
+    {
+      type: "list",
+      message: "Choose a license for your project",
+      name: "license",
+      choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3-Clause", "None"],
+    },
   ])
   .then((response) => {
     //takes argument of specific properties belonging to the response, thus destructuring.
+
+
 
     const info = `
 # ${response.title}
@@ -69,6 +77,7 @@ ${response.installation}
 ${response.usage}
 
 ## License
+${response.license}
 
 ## Contributing
 ${response.contributing}

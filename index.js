@@ -40,6 +40,11 @@ inquirer
       message: "What is your github username?",
       name: "github",
     },
+    {
+      type: "input",
+      message: "What is your email",
+      name: "email",
+    },
   ])
   .then((response) => {
     //takes argument of specific properties belonging to the response, thus destructuring.
@@ -64,7 +69,11 @@ ${response.contributing}
 ${response.tests}
 
 ## Questions
-https://github.com/${response.github}
+
+GitHub profile - https://github.com/${response.github}
+
+For more information/to ask questions, feel free to contact via email, at ${response.email}. Thank you.
+
   `;
 
     const folder = "generated-readmes";

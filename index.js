@@ -26,16 +26,16 @@ inquirer
       name: "GitHub",
     },
   ])
-  .then(({ user, location, LinkedIn, GitHub }) => {
+  .then((response) => {
     //takes argument of specific properties belonging to the response, thus destructuring.
 
     const info = `
     <body>
     <div class="info">
-    <h2>Hi ${user}!</h2>
-    <p>You are based in ${location}.</p>
-    <p>Your LinkedIn URL is: ${LinkedIn}.</p>
-    <p>Your Github URL is: ${GitHub}.</p>
+    <h2>Hi ${response.user}!</h2>
+    <p>You are based in ${response.location}.</p>
+    <p>Your LinkedIn URL is: ${response.LinkedIn}.</p>
+    <p>Your Github URL is: ${response.GitHub}.</p>
     </div>
     </body>
   `;

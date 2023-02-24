@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
 
 inquirer
   .prompt([
@@ -74,7 +73,7 @@ inquirer
           "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
         break;
       default:
-        licenseBadge = "none";
+        licenseBadge = "";
     }
 
     const info = `

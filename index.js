@@ -35,6 +35,11 @@ inquirer
       message: "What are the test instructions for your project?",
       name: "tests",
     },
+    {
+      type: "input",
+      message: "What is your github username?",
+      name: "github",
+    },
   ])
   .then((response) => {
     //takes argument of specific properties belonging to the response, thus destructuring.
@@ -59,7 +64,7 @@ ${response.contributing}
 ${response.tests}
 
 ## Questions
-
+https://github.com/${response.github}
   `;
 
     const folder = "generated-readmes";

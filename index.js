@@ -64,18 +64,21 @@ inquirer
       case "Apache":
         licenseBadge =
           "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+        break;
       case "BSD 3-Clause":
         licenseBadge =
           "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+        break;
       case "GNU GPL v3":
         licenseBadge =
           "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+        break;
       default:
         licenseBadge = "none";
     }
 
     const info = `
-${licenseBadge};
+${licenseBadge}
 
 # ${response.title}
 

@@ -40,7 +40,10 @@ inquirer
     </body>
   `;
 
-    fs.writeFile(`${user}.html`, info, (err) =>
+    const folder = "generated-readmes"; 
+    const filePath = `${folder}/${response.user}.html`;
+
+    fs.writeFile(filePath, info, (err) =>
       err ? console.error(err) : console.log("Commit logged!")
     );
   });

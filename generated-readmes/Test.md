@@ -1,9 +1,9 @@
 
-none
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # Test
 
-## This is a test
+## This is a project test.
 
 - [Installation](#Installation)
 - [Usage](#Usage)
@@ -13,24 +13,24 @@ none
 - [Questions](#Questions)
 
 ## Installation
-Perform the test
+None Applicable
 
 ## Usage
-Testing 1, 2, 3..
+N/A
 
 ## License
-None
+Apache
 
 ## Contributing
-do the testey westey
+There are none right now.
 
 ## Tests
-test test test
+To test, make the test and test away!
 
 ## Questions
 
 GitHub profile - https://github.com/HenryJamesGreen
 
-For more information/to ask questions, feel free to contact via email, at henryjamesgreen@hjghjg.com. Thank you.
+For more information/to ask questions, feel free to contact via email, at henryjamesgreen92@gmail.com. Thank you.
 
   

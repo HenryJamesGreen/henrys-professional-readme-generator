@@ -52,8 +52,7 @@ inquirer
     },
   ])
   .then((response) => {
-    //takes argument of specific properties belonging to the response, thus destructuring.
-
+//Licence badges switch statement. This will show the selected badges logo (accessed via the relevant link).
     let licenseBadge;
     switch (response.license) {
       case "MIT":
@@ -76,6 +75,7 @@ inquirer
         licenseBadge = "";
     }
 
+    //markdown info and presentation.
     const info = `
 ${licenseBadge}
 
@@ -113,10 +113,13 @@ For more information/to ask questions, feel free to contact via email, at ${resp
 
   `;
 
+  //store readmes in folder for generated readmes.
+
     const folder = "generated-readmes";
     const filePath = `${folder}/${response.title}.md`;
 
+//write file - if error show error. If ok, show "README file generated!"
     fs.writeFile(filePath, info, (err) =>
-      err ? console.error(err) : console.log("Commit logged!")
+      err ? console.error(err) : console.log("READme file generated!")
     );
   });
